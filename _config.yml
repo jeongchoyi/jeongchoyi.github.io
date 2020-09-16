@@ -1,11 +1,10 @@
 name: Choyi
 permalink: :year/:month/:day/:title
-url: "https://iamcho2.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl=: "" # the subpath of your site, e.g. "/blog"
+baseurl: ""
 
 # Your blog's start year and this year, showed in the footer left
 # start is optional
-start:
+start: 2020
 now: 2020
  
 # Social links showed in the footer
