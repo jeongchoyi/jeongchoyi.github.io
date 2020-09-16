@@ -1,6 +1,7 @@
 name: Choyi
 permalink: :year/:month/:day/:title
-baseurl: /jekyll-theme-diary
+url: "https://iamcho2.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl=: "" # the subpath of your site, e.g. "/blog"
 
 # Your blog's start year and this year, showed in the footer left
 # start is optional
