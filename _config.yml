@@ -1,12 +1,12 @@
-name: Choyi Jeong
+name: Choyi
 permalink: :year/:month/:day/:title
-baseurl: /
+baseurl: ""
 
 # Your blog's start year and this year, showed in the footer left
 # start is optional
-start: 2020
+start:
 now: 2020
-
+ 
 # Social links showed in the footer
 # You just need modify the nickname of github and twitter
 link:
@@ -19,6 +19,7 @@ nav:
    Home: "/"
    Diary: "/diary"
 
+   
 markdown: kramdown
 highlighter: rouge
 
