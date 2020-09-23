@@ -76,6 +76,18 @@ vi 편집기로
 
 
 
+### 확장자별 기본 프로그램 설정하기[](#open-with)<a id="open-with-anchor"></a>
+
+> .html 파일 클릭하면 chrome이 아니라 vscode가 떴으면 좋겠고,
+
+> .md 파일 클릭하면 xcode가 아니라 typora가 떴으면 좋겠어서 설정
+
+해당 확장자 파일 우클릭 - `Get Info` - `Open with` - 해당 .app으로 바꿔줌 - `Change All...`  클릭
+
+(Get Info를 누르지 않고 우클릭-Open with로 바꾸면 확장자별이 아니라 그냥 그 파일 한개만 해당 프로그램으로 여는 것)
+
+
+
 ## Terminal settings
 
 ### Homebrew 설치
@@ -264,4 +276,6 @@ $ git config --global core.quotepath false
 
 
 # Updated
+
+[확장자별 기본 프로그램 설정하기](#open-with-anchor)<a id="open-with"></a>
 
