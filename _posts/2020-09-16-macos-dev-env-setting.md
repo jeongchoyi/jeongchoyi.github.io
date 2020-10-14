@@ -19,6 +19,8 @@ macOS Catalina 10.15.6
 
 Date: 2020.09.16
 
+Update: 2020.10.14
+
 
 
 ## OS settings
@@ -269,7 +271,103 @@ $ git config --global core.quotepath false
 
 
 
-## VSC Extensions
+## VSC Extensions[](#vsc-extensions)<a id="vsc-extensions-anchor"></a>
+
+* C/C++
+  * c, c++ 빌드 & 컴파일
+
+
+
+# How to compile C/C++ on MacOS[](#compile-c-macos)<a id="compile-c-macos-anchor"></a>
+
+* VSC Extensions 중 C/C++ 다운로드
+
+* 워크스페이스에 프로젝트 하나 만들기 (Open folder - new folder - open)
+
+* 파일 추가 helloworld.cpp
+
+* 상단표시줄에서 Terminal - Configure tasks - Create task.json file from template - Others 선택
+
+* ```
+  {
+      // See https://go.microsoft.com/fwlink/?LinkId=733558
+      // for the documentation about the tasks.json format
+      "version": "2.0.0",
+      "tasks": [
+          {
+              "label": "echo",
+              "type": "shell",
+              "command": "echo Hello"
+          }
+      ]
+  }
+  ```
+
+  이런 내용이 기본적으로 불러와지는데 
+
+* ```
+  {
+  	"version": "2.0.0",
+  	"tasks": [
+  		{
+  			"type": "shell",
+  			"label": "C/C++: g++ build active file",
+  			"command": "/usr/bin/g++",
+  			"args": [
+  				"-g",
+  				"${file}",
+  				"-o",
+  				"${fileDirname}/${fileBasenameNoExtension}.exe"
+  			],
+  			"options": {
+  				"cwd": "${workspaceFolder}"
+  			},
+  			"problemMatcher": [
+  				"$gcc"
+  			],
+  			"group": {
+  				"kind": "build",
+  				"isDefault": true
+  			}
+  		},
+  		{
+  			"type": "shell",
+  			"label": "Run C++",
+  			"command": "${fileDirname}/${fileBasenameNoExtension}.exe",
+  			"group": {
+  				"kind": "test",
+  				"isDefault": true
+  			}
+  		}
+  	]
+  }
+  ```
+
+  위 내용으로 덮어씌운 후 저장 [출처](https://github.com/Jindae/seoultech-PL-2020/blob/master/practices/practice1/Example_macOS_tasks.json)
+
+* 상단표시줄에서 Terminal - `Configure default build task` - `C/C++ :g++ build active file`
+
+### 단축키 설정하기
+
+`Ctrl+K Ctrl+S` 눌러서 단축키 설정 창 띄움
+
+오른쪽 맨 위 추가 버튼 클릭 - keybindings.json 이 열리는데
+
+```
+// Place your key bindings in this file to override the defaults
+[
+    //build
+        { "key": "ctrl+alt+b", "command":"workbench.action.tasks.build"}
+    //run
+        { "key": "ctrl+alt+r", "command":"workbench.action.tasks.test"}
+]
+```
+
+이렇게 단축키를 추가해줌.
+
+cpp 파일 작성 후 빌드 - 런 단축키 쓰면 됨 !
+
+> *.dSYM 파일은 macOS의 debug symbols를 저장하는 파일. 무시하면 됨.
 
 
 
@@ -279,3 +377,6 @@ $ git config --global core.quotepath false
 
 [확장자별 기본 프로그램 설정하기](#open-with-anchor)<a id="open-with"></a>
 
+[VSC Extensions](#vsc-extensions-anchor)<a id="vsc-extensions"></a>
+
+[How to compile C/C++ on MacOS](#compile-c-macos-anchor)<a id="compile-c-macos"></a>
