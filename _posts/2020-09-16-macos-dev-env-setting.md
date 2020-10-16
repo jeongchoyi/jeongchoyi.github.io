@@ -47,7 +47,7 @@ Update: 2020.10.14
 
 ### Terminal
 
-![](./img/200916-1.png)
+![](/assets/img/200916-1.png)
 
 * choiui 이 부분  .. ^^ ~~누구 맘대로 choi래~~
 * 상단바   - `System Preferences` - `Sharing` - `Edit` 
