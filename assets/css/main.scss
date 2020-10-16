@@ -4,9 +4,11 @@
 @import "typo";
 @import "paper";
 @import "calendar";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 * {
-    font-family: "Microsoft YaHei UI";
+    font-family: 'Spoqa Han Sans', 'Noto Sans KR', sans-serif;
 }
 body {
     margin: 0 0;
