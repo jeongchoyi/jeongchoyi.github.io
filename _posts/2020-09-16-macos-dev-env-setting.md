@@ -274,11 +274,12 @@ $ git config --global core.quotepath false
 ## VSC Extensions[](#vsc-extensions)<a id="vsc-extensions-anchor"></a>
 
 * C/C++
+  
   * c, c++ 빌드 & 컴파일
+  
+  
 
-
-
-# How to compile C/C++ on MacOS[](#compile-c-macos)<a id="compile-c-macos-anchor"></a>
+## How to compile C/C++ on MacOS[](#compile-c-macos)<a id="compile-c-macos-anchor"></a>
 
 * VSC Extensions 중 C/C++ 다운로드
 
@@ -371,7 +372,56 @@ cpp 파일 작성 후 빌드 - 런 단축키 쓰면 됨 !
 
 
 
+## Homebrew로 설치하기[](#install-with-brew)<a id="install-with-brew-anchor"></a>
 
+### nodejs 설치하기
+
+```
+$ brew install node
+```
+
+> 이 때 npm은 자동으로 설치됨
+
+### express 설치하기
+
+```
+$ npm install express
+```
+
+### tomcat 설치하기
+
+```
+$ brew install tomcat
+```
+
+> 실행할 때 필요한 주소 : /usr/local/Cellar/tomcat/버전명/bin
+>
+> 내 경우는 실행할 때 
+>
+> ```
+> $ cd /usr/local/Cellar/tomcat/9.0.39/bin
+> $ ./catalina start //서버 시작
+> // localhost:8080 으로 접속
+> $ ./catalina stop //서버 종료
+> ```
+
+* root path
+
+  ```
+  /usr/local/Cellar/tomcat/버전명/libexec/webapps/
+  // 이 안에 새 디렉토리 생성 후 작업
+  ```
+
+* root path 바꾸는 법
+
+  ```
+  $ sudo vi /usr/local/Cellar/tomcat/버전명/libexec/conf/server.html
+  
+  Host name="localhost" appBase="webapps"
+  //"webapps" 를 "원하는 디렉토리" 로 바꿔주면 된다
+  ```
+
+  
 
 # Updated
 
@@ -380,3 +430,6 @@ cpp 파일 작성 후 빌드 - 런 단축키 쓰면 됨 !
 [VSC Extensions](#vsc-extensions-anchor)<a id="vsc-extensions"></a>
 
 [How to compile C/C++ on MacOS](#compile-c-macos-anchor)<a id="compile-c-macos"></a>
+
+[Homebrew로 설치하기](#install-with-brew-anchor)<a id="install-with-brew"></a>
+
