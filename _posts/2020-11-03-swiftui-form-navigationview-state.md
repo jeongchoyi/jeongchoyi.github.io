@@ -142,7 +142,7 @@ Simulator를 돌려보면 아래와 같이 스크롤에 따라 Navi bar가 생�
 
 자 이제 Navigation bar에 title을 달아보자! ***modifier***를 사용하면 된다. 
 
-*modifier*는 한 가지 작은 차이가있는 일반 메소드인데, **항상 사용하는 모든 항목의 새 인스턴스를 반환**합니다.
+*modifier*는 한 가지 작은 차이가있는 일반 메소드인데, **항상 사용하는 모든 항목의 새 인스턴스를 반환**한다.
 
 ```swiftui
 .navigationBarTitle(Text("SwiftUI"))
@@ -171,4 +171,36 @@ Simulator를 돌려보면 아래와 같이 스크롤에 따라 Navi bar가 생�
 ```
 .navigationBarTitle("SwiftUI")
 ```
+
+
+
+### 프로그램 state 수정하기
+
+SwiftUI 개발자들 사이에서는 이런 말이 있다고 한다,,
+
+**"view는 view state의 함수이다(views are a function of their state)"**... 처음엔 먼 말인지 모르겠지만 예시를 보자
+
+예를들어 격투 게임을 하고 있다고 치면, 
+
+목숨 몇개를 잃기도 하고, 점수를 좀 얻기도 하고, 템을 얻거나 좋은 무기를 주울수도 있는데, 이런것들은 우리는 **state**라고 할 것!
+
+**게임이 지금 어떤 상태인지 알려주는 설정들의 active collection**
+
+
+
+게임을 끄면 state는 저장될거고,  다시 게임을 켜면 내가 어디에 있었는지를 다시 불러올 수 있다.
+
+근데 우리가 게임을 하는 동안에는 모든 정수들, 문자열들, boolean들 등등이 내가 뭘 하고 있는지를 설명하기 위해 RAM에 저장되는데,
+
+이 모든 걸 state라고 하는 것!
+
+
+
+자자 그래서 SwiftUI의 view는 그들의 state의 함수이다! 라고 하는 건,
+
+UI가 어떻게 생겼는지가 (= 사람들이 보고 상호작용할 수 있는 것들) 프로그램의 state에 의해 결정된다는 뜻이다.
+
+ex) textfield에 이름을 입력하기 전 까지는 '계속' 버튼을 누를 수 없다던가 하는..
+
+
 
