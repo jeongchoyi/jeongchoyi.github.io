@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "SwiftUI : Form, NavigationView, @State" 
-date: 2020-11-3
+title: "SwiftUI : Stack, Text, Image" 
+date: 2020-11-4
 category: read 
 excerpt: ""
 ---
