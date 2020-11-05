@@ -204,3 +204,81 @@ ex) textfield에 이름을 입력하기 전 까지는 '계속' 버튼을 누를 
 
 
 
+말은 쉬워 보이는데... 사용자가 앱을 오-래 사용하다 보면 여러 가지 버튼들을 누르기도 하고, 로그인하거나 데이터를 새로고침 하기도 하잖아?
+
+state를 저장하기란 그렇게 호락호락한 것이 아니라는 것 -_-;;
+
+정확한 state를 저장하려면 사용자가 수행한 모든 것을 하나하나 되돌려서 따라가야 하는데,,, 이게 말이 되냑오~
+
+그래서 보통의 앱은 상태를 저장하려고 시도조차 하지 않음. 해도 아주 약간만 함
+
+ex) 포토샵의 undo state stack ...
+
+
+
+SwiftUI에 적용시켜봅시다! : title string이 있는 버튼이 있고 버튼을 누르면 실행되는 action closure
+
+```swift
+struct ContentView: View {
+    var tapCount = 0
+    
+    var body: some View {
+        Button("Tap Count \(tapCount)"){
+            self.tapCount += 1
+        }
+    }
+}
+```
+
+빌드해봅시다 ! -> 안 됨.
+
+> SwiftUI Error: Left side of mutating operator isn't mutable: 'self' is immutable
+
+왜냐? ContentView는 struct다. 그 말은.. 얘는 상수로 생성됐을거라는 것 immutable(불변)하다
+
+프로퍼티의 값을 바꾸는 struct 함수를 만드려면 `mutating` 키워드를 써줘야 하는데... Swift는 그걸 금지하고 있음
+
+(computed properties (다른 속성에 의해 해당 속성이 정해지는 프로퍼티)를 mutating하게 바꾸는 것을 금지
+
+= `mutating var body: some View {} ` 이런 식으로 못 쓴다..) 걍 안 됨! 허락을 안해줘요!
+
+
+
+그럼 프로그램 실행 동작중에 값을 바꾸고 싶은데 뷰들이 struct라 못바꾸네... 망한거?
+
+ㄴㄴ.. 그래서 Swift가 주는 특별 솔루션 ~! `preperty wrapper`!!
+
+프로퍼티 이전에 위치시키는 특별 속성임
+
+버튼을 몇 번 클릭했는지 같은 간단한 프로그램 state를 저장하기 위해서는, `@State` 라는 SwiftUI의 property wrapper를 쓰면 됨
+
+```swift
+struct ContentView: View {
+    @State var tapCount = 0
+    
+    var body: some View {
+        Button("Tap Count \(tapCount)"){
+            self.tapCount += 1
+        }
+    }
+}
+```
+
+
+
+근데 여기서 질문.. 걍 클래스 쓰면 안되나? 이거 약간 편법같은디..
+
+ㄴㄴ.. 걱정마삼 ! SwiftUI를 배우다보면 알게될텐데.. SwiftUI는 내가 만든 struct들을 자주 없애고 다시만들고 할거라서
+
+그걸 작고 간단한 struct로 유지하는 건 성능에 아주 중요하다~
+
+
+
+> p.s.
+>
+> 프로그램의 state를 저장하는 방법은 여러가지가 있는데, 그중에서 오늘은 @State를 배운 것
+>
+> @State는 한 뷰에 저장된 간단한 프로퍼티들을 위해 특별히 만들어진 애
+>
+> 그래서 Apple은 접근제한자 private 를 추가하는 걸 추천함. `@State private var tapCount = 0` 처럼!
+
