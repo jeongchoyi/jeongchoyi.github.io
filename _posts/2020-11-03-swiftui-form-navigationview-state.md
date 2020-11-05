@@ -172,7 +172,7 @@ Simulator를 돌려보면 아래와 같이 스크롤에 따라 Navi bar가 생�
 .navigationBarTitle("SwiftUI")
 ```
 
-
+<br>
 
 ### 프로그램 state 수정하기
 
@@ -186,6 +186,8 @@ SwiftUI 개발자들 사이에서는 이런 말이 있다고 한다,,
 
 **게임이 지금 어떤 상태인지 알려주는 설정들의 active collection**
 
+<br>
+
 
 
 게임을 끄면 state는 저장될거고,  다시 게임을 켜면 내가 어디에 있었는지를 다시 불러올 수 있다.
@@ -194,6 +196,8 @@ SwiftUI 개발자들 사이에서는 이런 말이 있다고 한다,,
 
 이 모든 걸 state라고 하는 것!
 
+<br>
+
 
 
 자자 그래서 SwiftUI의 view는 그들의 state의 함수이다! 라고 하는 건,
@@ -201,6 +205,8 @@ SwiftUI 개발자들 사이에서는 이런 말이 있다고 한다,,
 UI가 어떻게 생겼는지가 (= 사람들이 보고 상호작용할 수 있는 것들) 프로그램의 state에 의해 결정된다는 뜻이다.
 
 ex) textfield에 이름을 입력하기 전 까지는 '계속' 버튼을 누를 수 없다던가 하는..
+
+<br>
 
 
 
@@ -215,6 +221,8 @@ state를 저장하기란 그렇게 호락호락한 것이 아니라는 것 -_-;;
 ex) 포토샵의 undo state stack ...
 
 
+
+<br>
 
 SwiftUI에 적용시켜봅시다! : title string이 있는 버튼이 있고 버튼을 누르면 실행되는 action closure
 
@@ -244,6 +252,8 @@ struct ContentView: View {
 
 
 
+<br>
+
 그럼 프로그램 실행 동작중에 값을 바꾸고 싶은데 뷰들이 struct라 못바꾸네... 망한거?
 
 ㄴㄴ.. 그래서 Swift가 주는 특별 솔루션 ~! `preperty wrapper`!!
@@ -264,7 +274,7 @@ struct ContentView: View {
 }
 ```
 
-
+<br>
 
 근데 여기서 질문.. 걍 클래스 쓰면 안되나? 이거 약간 편법같은디..
 
@@ -272,7 +282,7 @@ struct ContentView: View {
 
 그걸 작고 간단한 struct로 유지하는 건 성능에 아주 중요하다~
 
-
+<br>
 
 > p.s.
 >
