@@ -388,66 +388,64 @@ MVVM 통신 코드를 보기 전에,
 
    7. 데이터를 사용할 swift 파일 (ViewController 같은) 에 변수 선언하기
 
-      ```swift
-      var newArchiveList: [NewArchive] = []
-      ```
-
-      
+   ```swift
+   var newArchiveList: [NewArchive] = []
+   ```
 
    8. 7번과 같은 파일에 함수 추가하기
 
-      ```swift
-      func getNewArchive() {
-              
-              NewArchiveService.shared.getNewArchive() {
-                  /*
-                   clusure 의 선언부에 [weak self] 를 명시해주고
-                   self 가 사용되는 곳에 self 를 옵셔널로 사용해주면
-                   strong reference cycle 을 피할 수 있다.
+   ```swift
+   func getNewArchive() {
+           
+           NewArchiveService.shared.getNewArchive() {
+               /*
+                clusure 의 선언부에 [weak self] 를 명시해주고
+                self 가 사용되는 곳에 self 를 옵셔널로 사용해주면
+                strong reference cycle 을 피할 수 있다.
+                
+                어떠한 상황에서 해당 issue 가 발생하는 지 모르겠다면
+                closure 내부에서 self 를 사용하는 경우
+                [weak self] param in 을 항상 명시해주는 습관을 기르면 좋을 것이다.
+               */
+               [weak self]
+               (data) in
+               /*
+                예약어의 경우 변수 이름을 grave accent 로 감싸주면
+                변수로써 사용할 수 있다.
+                
+                이 곳에서 self 를 옵셔널로 사용해준 모습이다.
+               */
+               guard let `self` = self else { return }
+               
+               switch data {
                    
-                   어떠한 상황에서 해당 issue 가 발생하는 지 모르겠다면
-                   closure 내부에서 self 를 사용하는 경우
-                   [weak self] param in 을 항상 명시해주는 습관을 기르면 좋을 것이다.
-                  */
-                  [weak self]
-                  (data) in
-                  /*
-                   예약어의 경우 변수 이름을 grave accent 로 감싸주면
-                   변수로써 사용할 수 있다.
+               case .success(let result):
+                   let _result = result as! [NewArchive]
+                   self.newArchiveList = _result
+                   self.newArchiveCV.reloadData()
+                   print(result)
                    
-                   이 곳에서 self 를 옵셔널로 사용해준 모습이다.
-                  */
-                  guard let `self` = self else { return }
-                  
-                  switch data {
-                      
-                  case .success(let result):
-                      let _result = result as! [NewArchive]
-                      self.newArchiveList = _result
-                      self.newArchiveCV.reloadData()
-                      print(result)
-                      
-                  case .requestErr(let message):
-                      print(message)
-                  case .pathErr:
-                      print("pathErr")
-                  case .serverErr:
-                      print("serverErr")
-                  case .networkFail:
-                      print("networkFail")
-                  }
-              }
-          }
-      ```
+               case .requestErr(let message):
+                   print(message)
+               case .pathErr:
+                   print("pathErr")
+               case .serverErr:
+                   print("serverErr")
+               case .networkFail:
+                   print("networkFail")
+               }
+           }
+       }
+   ```
 
-      
+   
 
    9. 사용
 
-      ```swift
-      let newArchive = newArchiveList[indexPath.row]
-              cell.articleTitle.text = "\(newArchive.archive_title)"
-      ```
+   ```swift
+   let newArchive = newArchiveList[indexPath.row]
+           cell.articleTitle.text = "\(newArchive.archive_title)"
+   ```
 
-      
+   
 
