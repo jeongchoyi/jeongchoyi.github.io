@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SwiftUI MVVM 패턴 코드 이해하기" 
-date: 2020-11-12
+date: 2020-11-13
 category: read 
 excerpt: ""
 
