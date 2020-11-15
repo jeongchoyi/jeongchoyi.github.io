@@ -21,11 +21,13 @@ excerpt: ""
 
 ↳ 🗒 AppDelegate.swift
 
+↳ 🗒 SceneDelegate.swift
+
 ↳ 📂 APIServices
 
 ↳ 📂 Extensions
 
-↳ 📂 Model
+↳ 📂 Models
 
 ↳ 📂 Protocols
 
