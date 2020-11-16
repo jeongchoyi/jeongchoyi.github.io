@@ -113,7 +113,7 @@ var columns: [GridItem] {
 
 ### GridItem에서 .adaptive
 
-<img src="/Users/choyi/Library/Application Support/typora-user-images/image-20201117003310466.png" alt="image-20201117003310466" width="400" />
+<img src="https://user-images.githubusercontent.com/28949235/99282358-ee0ccb80-2876-11eb-82b2-427d54843d76.png" alt="image-20201117003310466" width="400" />
 
 ```swift
 var columns: [GridItem] {
