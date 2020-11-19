@@ -201,14 +201,14 @@ GeometryReader 안에서는 변수를 선언할 수 없다.
 
 ```swift
 func makeBody(configuration: Configuration) -> some View {
-        let offset = 100 * CGFloat(value) + 15
+        let offset = CGFloat(value) / 100
         return GeometryReader{ geometry in
             VStack(spacing:0){
                 HStack{
                     Text("🐝")
                         .font(.system(size: 21))
                         .scaleEffect(x: -1, y: 1, anchor: .center)
-                        .frame(width: CGFloat(geometry.size.width / offset), height: 30, alignment: .bottomTrailing)
+                        .frame(width: CGFloat(geometry.size.width * offset + 15), height: 30, alignment: .bottomTrailing)
 ```
 
 ![image](https://user-images.githubusercontent.com/28949235/99613219-82835380-2a5a-11eb-9c71-3d7ff4c0e969.png)
