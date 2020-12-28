@@ -39,6 +39,13 @@ excerpt: ""
 
 ![image](https://user-images.githubusercontent.com/28949235/103189830-e6c6ec00-4911-11eb-9fc6-345d6af584b0.png)
 
+> PR merge 위한 최소 approve 갯수 : 2  
+> approve 이후 새 commit이 있으면 기존 approve가 취소됨  
+> 리뷰를 꼭 받아야하는 코드 owner를 지정 가능  
+> 관리자도 예외 없이 적용
+
+
+
 ### develop branch setting
 
 ![image](https://user-images.githubusercontent.com/28949235/103194055-a96a5a80-4921-11eb-9195-5541ae42b75e.png)
@@ -46,3 +53,4 @@ excerpt: ""
 
 
 세팅했다고 바로 브랜치 만들어지는 거 아니니까 브랜치는 따로 만들어 줘야 함!
+
