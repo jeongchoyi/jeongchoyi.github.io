@@ -37,7 +37,7 @@ Fork에 들어와서 `File`-`Clone` 클릭 !
 
 ## Branch Tracking, 생성하기[](#make-branch)<a id="make-branch-anchor"></a>
 
-![image-20201228213615276](/Users/choyi/Library/Application Support/typora-user-images/image-20201228213615276.png)
+![image](https://user-images.githubusercontent.com/28949235/103215644-4e535a80-4957-11eb-9c42-3c8c25f9ed7a.png)
 
 develop 브랜치 저 연두색 박스를 더블클릭!
 
