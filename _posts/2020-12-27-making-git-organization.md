@@ -1,5 +1,5 @@
 ---
-ㅁㅔlayout: post
+layout: post
 title: "협업 시작 전 Git Organization 및 repository 파기" 
 date: 2020-12-27
 category: read 
