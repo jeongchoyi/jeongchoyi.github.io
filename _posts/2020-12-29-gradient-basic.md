@@ -41,7 +41,7 @@ var gradientLayer: CAGradientLayer!
 ```
 
 > 왜 ... force unwapping 을 .. 해야... 하지?...
-> : 안 하면 오류난다. 초기값이 없어서.. 그래도 먼가 찝찝하니까 난 `?` 쓸래 ![image](https://user-images.githubusercontent.com/28949235/103270843-384ba580-49fc-11eb-85e1-847864623c7f.png)
+> : 안 하면 오류난다. 초기값이 없어서.. ~~그래도 먼가 찝찝하니까 난 `?` 쓸래~~ 안되네ㅡㅡ![image](https://user-images.githubusercontent.com/28949235/103270843-384ba580-49fc-11eb-85e1-847864623c7f.png)
 
 그리고 `ViewController`에 초기화, 초기 값 설정을 위한 함수 `createGradientLayer()`를 만들어준다.  
 뷰에 붙이는 거 까지 다 해주는 함수.. 이게 젤 간단한 방법. `viewDidLoad()` 나 `viewWillAppear()`에서 호출해주면 된다.
