@@ -72,3 +72,8 @@ excluded:
 깔 끔 ~~
 
 근데 아마 나중에 강도 제약 살짝 낮춰야 할 것 같기도 ...
+
+
+
+나중에 참고할 것 같은 곳  
+[여기](https://gwangyonglee.tistory.com/44)
