@@ -24,8 +24,6 @@ Gradient를 구현하기 위해서는 **CAGradientLayer 객체**를 사용한다
 background color위에 color gradient를 그려서 layer의 shape을 채우는 **layer** 이다!  
 모든 뷰 객체가 포함하고 있는 `CALayer` 클래스의 subclass이다. 
 
-참고- 원형 gradient는 지원하지 않음! 지금은 난 필요 없지만
-
 ### 쓰는 방법 요약
 
 >  View에 CAGradientLayer 객체를 만들어 뷰 레이어에 붙여주면(`addSublayer`) 된다.
