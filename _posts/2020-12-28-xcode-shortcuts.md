@@ -1,5 +1,5 @@
 ---
-ㅁㅔlayout: post
+layout: post
 title: "엑스코드Xcode 단축키" 
 date: 2020-12-28
 category: read 
