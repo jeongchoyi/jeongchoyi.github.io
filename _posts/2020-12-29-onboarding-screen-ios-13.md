@@ -9,7 +9,8 @@ excerpt: ""
 
 # Onboarding screen iOS 13 이상에서 적용
 
-엑코 버전 11에서는 
+엑코 버전 11에서는 프로젝트를 만들면 AppDelegate 뿐만 아니라  
+SceneDelegate 파일도 생성된다.
 
 iOS 13 이상에서는, `UserDefaults.standard.bool(forKey:"어쩌구") `사용해서  
 유저가 앱을 처음 Launch 하는지 아닌지에 따라 Onboarding 스크린을 띄우는 작업을  
