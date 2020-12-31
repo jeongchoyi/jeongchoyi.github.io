@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "특정 프로퍼티에 따라 배열 나누기" 
-date: 2020-12-30
+date: 2020-12-31
 category: read 
 excerpt: ""
 
