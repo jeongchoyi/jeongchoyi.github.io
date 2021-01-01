@@ -52,7 +52,7 @@ init?(named name: String)
 
 `UIColor(named: "BabyPink")` 이렇게여. 예시를 보자면,,
 
-![image](https://user-images.githubusercontent.com/28949235/103439856-f92f8580-4c83-11eb-8e12-ccdc9e778341.png)
+![image](https://user-images.githubusercontent.com/28949235/103440101-39900300-4c86-11eb-9dcb-a9f7bf5c4103.png)
 
 이렇게 Color Asset에 색상들을 추가해줬다면!
 
