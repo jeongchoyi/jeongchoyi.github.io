@@ -5,8 +5,11 @@
 <p align=center width=100%>
 <img src="https://user-images.githubusercontent.com/28949235/103538540-b7981800-4ed9-11eb-83bb-4659c2378d83.png" alt="momo  서비스아이콘" width=300 />
 
+</p><p align=center width=100%>
+
 **MOMO : 당신의 감정 기록을 도와줄 작가의 감정 표현**
 **개발 기간: 2020.12.27 ~**
+
 </p>
 
 ## Contributors
