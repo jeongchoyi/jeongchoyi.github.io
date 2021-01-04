@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "UIScrollView scrollViewWillEndDragging 실습" 
-date: 2021-01-01
+date: 2021-01-03
 category: read 
 excerpt: ""
 
