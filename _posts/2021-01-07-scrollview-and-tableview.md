@@ -64,7 +64,7 @@ UIView 넣어주고 얘도 0,0,0,0 Constraints 추가
 ![image](https://user-images.githubusercontent.com/28949235/103879070-b0ac1800-511a-11eb-9668-22e0195446af.png)![image](https://user-images.githubusercontent.com/28949235/103878977-8d816880-511a-11eb-92fe-42cc9479af6a.png)
 
 얘도 Height Constraint는 code로 잡아줄거라.. 위랑 똑같이! 하지만  
-![image-20210107190222033](/Users/choyi/Library/Application Support/typora-user-images/image-20210107190222033.png)
+![image-20210107190222033](https://user-images.githubusercontent.com/28949235/103987110-43a68a00-51cf-11eb-9fa2-ab0476810265.png)
 
 Bottom을 꼭 잡아줘야 된다. scrollView 니까 ~!
 
