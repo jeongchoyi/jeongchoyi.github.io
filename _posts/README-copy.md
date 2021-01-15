@@ -145,12 +145,12 @@
 <tr>
 <th>
 MOMO
+<img width=300/>
 </th>
 <th>
 Core Feature
 </th>
 </tr>
-
 
 <tr>
 
@@ -162,21 +162,58 @@ Core Feature
 
 <td>
 <pre>
-json
-  {
-    "id": 10,
-    "username": "alanpartridge",
-    "email": "alan@alan.com",
-    "password_hash": "$2a$10$uhUIUmVWVnrBWx9rrDWhS.CPCWCZsyqqa8./whhfzBZydX7yvahHS",
-    "password_salt": "$2a$10$uhUIUmVWVnrBWx9rrDWhS.",
-    "created_at": "2015-02-14T20:45:26.433Z",
-    "updated_at": "2015-02-14T20:45:26.540Z"
-}
+MOMO의 Core Feature는
+이
+렇
+게
+이
+~
+렇
+~
+게
+
+긴
+
+홈
+뷰
+인데요!
+
+section Frame Array를 만들어서 section 별 cell의 개수에 따라 gradient를 입혀줬어요.
+	
+    var sectionFrameArray: [CGRect]  = []
+    
+    func paintGradientWithFrame() {
+        for sectionIndex in 0..<7 {
+            let frame = self.sectionFrameArray[sectionIndex]
+            let view = UIView(frame: frame)
+            let gradientView = UIView(frame: frame)
+            let imgView = UIImageView(frame: view.bounds)
+            
+            self.currentColorSet = sectionIndex
+            self.gradientLayer = CAGradientLayer()
+            self.gradientLayer.frame = gradientView.frame
+            self.gradientLayer.colors = self.colorSets[self.currentColorSet]
+            
+            let image = UIImage.gradientImageWithBounds(bounds: frame, colors: self.colorSets[sectionIndex])
+            imgView.image = image
+            
+            view.isUserInteractionEnabled = false
+            view.addSubview(imgView)
+            self.homeTableView.addSubview(view)
+            self.homeTableView.sendSubviewToBack(view)
+        }
+    }
+
+
+​    
+
 </pre>
 </td>
 
 </tr>
 </table>
+
+
 
 ## Extension Function
 
