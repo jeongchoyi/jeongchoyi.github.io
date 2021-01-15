@@ -18,7 +18,9 @@
 
 | ![Unti초이tled-1](https://user-images.githubusercontent.com/28949235/104730925-429ccc00-577e-11eb-8679-10a39387cca3.png) | ![Untit해찌led-1](https://user-images.githubusercontent.com/28949235/104730921-40d30880-577e-11eb-8142-5afe2f7e929b.png) | ![정엽](https://user-images.githubusercontent.com/28949235/104730929-43cdf900-577e-11eb-9e8d-32b45c732204.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 왕초 쵸 [정초이](https://github.com/iamcho2) 🥭               | 사과보이 팬시보이 해찌 [이해석](https://github.com/haeseoklee) 🍎 | 워슈정엽런 0개국어 [이정엽](https://github.com/jeongyeob97) 🌕 |
+| 왕초 쵸 아요대장 [정초이](https://github.com/iamcho2) 🥭      | 사과보이 팬시보이 해찌 [이해석](https://github.com/haeseoklee) 🍎 | 워슈정엽런 0개국어 [이정엽](https://github.com/jeongyeob97) 🌕 |
+| 홈, 스크롤, 로그인, 회원가입                                 | 온보딩, 다이어리, 스플래쉬                                   | 리스트, 업로드, 모달                                         |
+| "해피아요~"                                                  | "인생은 쓰지만 가끔은 달다..."                               | "다사다난했지만 행복했다!"                                   |
 
 
 
@@ -54,14 +56,20 @@
 
 ### Onboarding - 🍎 해석
 
+> API 연결 완료
+
 - [x] `#1` 서비스 소개
 - [x] `#1 ` 체험해보기 버튼
 - [x] `#1` 감정 선택 버튼
 - [x] `#1 ` 문장 선택 버튼
 - [x] `#1 ` 일기 작성 예시
+- [x] `#1` 배경 애니메이션
+- [x] `#1` 오브제 배치
 - [x] `#1 ` 깊이 선택 스크롤바
 
 ### Home - 🥭 초이
+
+> API 연결 완료
 
 - [x] `#1` 연/월/일/요일
 - [x] `#1` 오늘 일기 업로드 안내 문구 (오늘일기X)
@@ -77,10 +85,13 @@
 
 ### Home_Scrolled - 🥭 초이
 
+> API 연결 완료
+
 - [x] `#1` 연/월 변경 버튼
 - [x] `#1` 연/월 변경 모달창
 - [x] `#1` 깊이
 - [x] `#1` 일기 물방울
+- [x] `#1` 오브제 배치
 - [x] `#1` 경고 모달창
 - [x] `#3` 일기 물방울 이동
 - [x] `#1` 업로드 버튼
@@ -89,17 +100,22 @@
 
 ### Diary - 🍎 해석
 
+> API 연결 완료
+
 - [x] `#1` 연/월/일/요일
 - [x] `#1` 감정
 - [x] `#1` 깊이
 - [x] `#1` 문장
 - [x] `#1` 작성한 일기
+- [x] `#1` 오브제 배치
 - [x] `#1` 뒤로가기 버튼
 - [x] `#1` 편집 버튼
 - [x] `#1` 삭제 버튼
 - [x] `#1` 경고 모달창
 
 ### Diary_Edit - 🍎 해석
+
+> API 연결 완료
 
 - [x] `#1` 연/월/일/요일 변경 버튼
 - [x] `#1` 날짜 변경 모달창
@@ -113,7 +129,10 @@
 
 ### Upload  - 🌕 정엽
 
+> API 연결 완료
+
 - [x] `#1` 감정 선택 버튼
+- [x] `#1` 배경 애니메이션
 - [x] `#1` 문장 선택 버튼
 - [x] `#1` 일기 작성하기
 - [x] `#1` 깊이 선택하기 버튼
@@ -125,6 +144,8 @@
 
 ### List  - 🌕 정엽
 
+> API 연결 완료
+
 - [x] `#1` 연/월
 - [x] `#1` 월간 일기 리스트
 - [x] `#1` 필터 버튼
@@ -133,6 +154,8 @@
 - [ ] `#2` 통계 리포트
 
 ### Login, Join - 🥭 초이
+
+> API 연결 완료
 
 - [x] `#1` 로그인
 - [x] `#1` 이메일 로그인
@@ -229,7 +252,7 @@ section Frame Array를 만들어서 section 별 cell의 개수에 따라 gradien
 ### UIImage
 
 ```swift
-gradientImageWithBounds(bounds: CGRect, colors: [CGColor]) -> UIImage //CAGradientLayer -> UIImage
+gradientImageWithBounds(bounds: CGRect, colors: [CGColor]) -> UIImage // CAGradientLayer -> UIImage
 rotate(radians: CGFloat) -> UIImage // UIImage 회전
 ```
 
@@ -242,28 +265,28 @@ textSpacing(lineSpacing: Int) -> NSMutableAttributedString // 자간, 행간 지
 ### UIView
 
 ```swift
-round(corners: UIRectCorner, cornerRadius: Double)
-initFromNib<T: UIView>() -> T?
-asImage() -> UIImage
+round(corners: UIRectCorner, cornerRadius: Double) // 특정 꼭짓점 rounding
+initFromNib<T: UIView>() -> T? // UIView를 nib으로 생성
+asImage() -> UIImage // UIView -> UIImage
 ```
 
 ### UILabel
 
 ```swift
-startBlink()
-stopBlink()
+startBlink() // 깜빡이는 애니메이션 시작
+stopBlink() // 깜빡이는 애니메이션 종료
 ```
 
 ### UISlider
 
 ```swift
-addTapGesture() //slider에 touch gesture 추가
+addTapGesture() // slider에 touch gesture 추가
 handleTap(sender: UITapGestureRecognizer) // tap gesture 인식
 ```
 
 ### UITextField
 
 ```swift
-modifyClearButtonWithImage(image: UIImage)
+modifyClearButtonWithImage(image: UIImage) // clear button 만들기
 ```
 
