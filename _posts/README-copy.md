@@ -141,7 +141,7 @@
 
 ## Core Feature
 
-| ![Untitleikugd-1](https://user-images.githubusercontent.com/28949235/104732479-a32d0880-5780-11eb-9d48-5c8071ea629a.png) | 모모의 Core Feature! |
+| ![Untitleikugd-1](https://user-images.githubusercontent.com/28949235/104732479-a32d0880-5780-11eb-9d48-5c8071ea629a.png) | 모모의 Core Feature는 바로바로  <br />이<br />렇<br />게<br />늘<br />어<br />나<br />는<br />홈<br />뷰<br />입니다!<br /><br /> |
 | ------------------------------------------------------------ | -------------------- |
 
 ## Extension Function
