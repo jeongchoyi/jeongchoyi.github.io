@@ -141,9 +141,8 @@
 
 ## Core Feature
 
-| ![Untitleikugd-1](https://user-images.githubusercontent.com/28949235/104732479-a32d0880-5780-11eb-9d48-5c8071ea629a.png) | Value            |
-| ------------------------------------------------------------ | ---------------- |
-| <img width=300/>                                             | <img width=500/> |
+| ![Untitleikugd-1](https://user-images.githubusercontent.com/28949235/104732479-a32d0880-5780-11eb-9d48-5c8071ea629a.png)<br /><img width=300/> | <img width=500/> <br />Value |
+| ------------------------------------------------------------ | ---------------------------- |
 
 ## Extension Function
 
