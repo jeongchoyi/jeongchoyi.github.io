@@ -141,11 +141,10 @@
 
 ## Core Feature
 
-<table>
+<table style="margin: auto;">
 <tr>
 <th>
 MOMO
-<img width=300/>
 </th>
 <th>
 Core Feature
@@ -163,6 +162,7 @@ Core Feature
 <td>
 <pre>
 MOMO의 Core Feature는
+
 이
 렇
 게
@@ -204,8 +204,17 @@ section Frame Array를 만들어서 section 별 cell의 개수에 따라 gradien
         }
     }
 
+깊이 별 오브제들도 각 section freame에 맞게 붙여줬어요.
 
-​    
+    // 전달받은 img, frame의 x, y값에 맞게 오브제 배치
+    func attachObjet(frameX: CGFloat, frameY: CGFloat, img: UIImage) {
+        let imgView = UIImageView(frame: CGRect(x: frameX, y: frameY, width: img.size.width, height: img.size.height))
+        imgView.image = img
+    
+        imgView.isUserInteractionEnabled = false
+        homeTableView.addSubview(imgView)
+    }
+
 
 </pre>
 </td>
