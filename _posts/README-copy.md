@@ -145,12 +145,12 @@
 <tr>
 <th>
 MOMO
-<img width=300/>
 </th>
 <th>
 Core Feature
 </th>
 </tr>
+
 
 <tr>
 
