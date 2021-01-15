@@ -6,6 +6,7 @@
 
 <p align=center width=100%>
 <img src="https://user-images.githubusercontent.com/28949235/104711036-2e4bd580-5764-11eb-8ef2-e545137c6f00.png" alt="momo  서비스아이콘" />
+
 </p><div align=center>
 
 **MOMO : 당신의 감정 기록을 도와줄 책 속의 문장**<br>
@@ -44,7 +45,6 @@
 ### Layout, View
 
 * [Lottie-ios](https://github.com/airbnb/lottie-ios) [Snapkit](https://github.com/SnapKit/SnapKit) [IQKeyboardManagerSwift]() [CLTypingLabel]()
-
 
 ## Feature
 
@@ -141,8 +141,18 @@
 
 ## Core Feature
 
-| <img src="https://user-images.githubusercontent.com/28949235/104732479-a32d0880-5780-11eb-9d48-5c8071ea629a.png" width=300> | MOMO의 Core Feature는 바로바로  <br />이<br />렇<br />게<br />늘<br />어<br />나<br />는<br />홈<br />뷰<br />입니다!<br /><br /><br /><br /> Home, Home_Scroll을 하나의 tableview로 구현했어요.<br />```func paintGradientWithFrame() {<br/>            for sectionIndex in 0..<7 {<br/>                let frame = self.sectionFrameArray[sectionIndex]<br/>                let view = UIView(frame: frame)<br/>                let gradientView = UIView(frame: frame)<br/>                let imgView = UIImageView(frame: view.bounds)<br/>                <br/>                self.currentColorSet = sectionIndex<br/>                self.gradientLayer = CAGradientLayer()<br/>                self.gradientLayer.frame = gradientView.frame<br/>                self.gradientLayer.colors = self.colorSets[self.currentColorSet]<br/>                <br/>                let image = UIImage.gradientImageWithBounds(bounds: frame, colors: self.colorSets[sectionIndex])<br/>                imgView.image = image<br/>                <br/>                <br/>                view.isUserInteractionEnabled = false<br/>                view.addSubview(imgView)<br/>                self.homeTableView.addSubview(view)<br/>                self.homeTableView.sendSubviewToBack(view)<br/>            }<br/>        }``` |
-| ------------------------------------------------------------ | -------------------- |
+<style>
+table th:first-of-type {
+    width: 20%;
+}
+table th:nth-of-type(2) {
+    width: 80%;
+}
+</style>
+
++---------+---------+
+| Header1 | header2 |
++---------+---------+
 
 ## Extension Function
 
