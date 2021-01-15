@@ -141,8 +141,45 @@
 
 ## Core Feature
 
-| ![Untitleikugd-1](https://user-images.githubusercontent.com/28949235/104732479-a32d0880-5780-11eb-9d48-5c8071ea629a.png)<br /><img width=300/> | <img width=500/> <br />Value |
-| ------------------------------------------------------------ | ---------------------------- |
+<table>
+<tr>
+<th>
+MOMO
+</th>
+<th>
+Core Feature
+</th>
+</tr>
+
+<tr>
+
+<td>
+
+<pre>
+![Untitleikugd-1](https://user-images.githubusercontent.com/28949235/104732479-a32d0880-5780-11eb-9d48-5c8071ea629a.png)
+</pre>
+</td>
+
+<td>
+
+<pre>
+json
+  {
+    "id": 10,
+    "username": "alanpartridge",
+    "email": "alan@alan.com",
+    "password_hash": "$2a$10$uhUIUmVWVnrBWx9rrDWhS.CPCWCZsyqqa8./whhfzBZydX7yvahHS",
+    "password_salt": "$2a$10$uhUIUmVWVnrBWx9rrDWhS.",
+    "created_at": "2015-02-14T20:45:26.433Z",
+    "updated_at": "2015-02-14T20:45:26.540Z"
+}
+</pre>
+</td>
+
+</tr>
+</table>
+
+
 
 ## Extension Function
 
