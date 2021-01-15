@@ -141,18 +141,9 @@
 
 ## Core Feature
 
-<style>
-table th:first-of-type {
-    width: 20%;
-}
-table th:nth-of-type(2) {
-    width: 80%;
-}
-</style>
-
-+---------+---------+
-| Header1 | header2 |
-+---------+---------+
+| ![Untitleikugd-1](https://user-images.githubusercontent.com/28949235/104732479-a32d0880-5780-11eb-9d48-5c8071ea629a.png) | Value            |
+| ------------------------------------------------------------ | ---------------- |
+| <img width=300/>                                             | <img width=500/> |
 
 ## Extension Function
 
