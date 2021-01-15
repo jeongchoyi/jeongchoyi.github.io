@@ -145,6 +145,7 @@
 <tr>
 <th>
 MOMO
+<img width=300/>
 </th>
 <th>
 Core Feature
@@ -154,14 +155,12 @@ Core Feature
 <tr>
 
 <td>
-
 <pre>
-![Untitleikugd-1](https://user-images.githubusercontent.com/28949235/104732479-a32d0880-5780-11eb-9d48-5c8071ea629a.png)
+<img src="https://user-images.githubusercontent.com/28949235/104732479-a32d0880-5780-11eb-9d48-5c8071ea629a.png" width=300 />
 </pre>
 </td>
 
 <td>
-
 <pre>
 json
   {
@@ -178,8 +177,6 @@ json
 
 </tr>
 </table>
-
-
 
 ## Extension Function
 
