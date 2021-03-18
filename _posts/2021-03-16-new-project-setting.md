@@ -53,7 +53,7 @@ excerpt: ""
 
 ### 폴더링
 
-![image-20210317005658853](/Users/choyi/Library/Application Support/typora-user-images/image-20210317005658853.png)
+![image-20210317005658853](https://user-images.githubusercontent.com/28949235/111634101-8755e980-8839-11eb-8527-2f1166b9ed45.png)
 
 * `APIModels` 과 `AppModels`
   * 전 프로젝트를 진행할 때 App 내에서 사용하는 Model과  
