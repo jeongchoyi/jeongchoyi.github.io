@@ -49,7 +49,7 @@ excerpt: ""
 뭐 과목에 대한 공부라고 할 건 없는 과목이지만 교수님이 얘기해주신 것들이나  
 제출해야 하는 것들 등... 수업시간에 정리한 내용을 적어두는 공간!
 
-![image-20210320173327006](/Users/choyi/Library/Application Support/typora-user-images/image-20210320173327006.png)
+![image](https://user-images.githubusercontent.com/28949235/111864379-d28c0b80-89a3-11eb-90f5-254c74605268.png)
 
 같은 맥락으로... 매주 출석 때문에 주차별 보고서를 내야 해서 만들어둔 페이지다.  
 만들고 방치해뒀었는데.. ㅎ 어떤 깜찍이가 잘 기록해놨구만 ~~~~!!!!!👏👏💯
