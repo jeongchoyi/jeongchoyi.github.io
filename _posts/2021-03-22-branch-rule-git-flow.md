@@ -42,11 +42,11 @@ excerpt: ""
 
 ### 이슈 넘버? 기능 설명? 버전 넘버?
 
-- **Master** (Main Branch)
-- **Develop** (Main Branch)
-- **Feature**/<Issue_number> or <Feature_name> / <Short Description>
-- **Release**/<version_number>
-- **Hotfix**/<Issue_number> or **Issue**/<Issue_number>
+- **Master**
+- **Develop**
+- **Feature**/(Issue_number) or (Feature_name) / (Short Description)
+- **Release**/(version_number)
+- **Hotfix**/(Issue_number) or **Issue**/(Issue_number)
 
 보통은 이렇게 이슈 넘버나 버전 넘버를 다는데...    
 이번 프로젝트에서는 최대한 한 이슈에 대해서는 한 개의 커밋을 하는 것을 목표로 할 것이기 때문에  
@@ -62,9 +62,9 @@ release-1.0.0 같은 식으로 네이밍 컨벤션을 정하는 것을 원문에
 
 - main (아맞다 이젠 메인이지)
 - develop
-- feature/<issue_number>
-- release-<version_number>
-- Hotfix/<Issue_number> (제발 쓸 일 없길 바라 ~~~) 
+- feature/(issue_number)
+- release-(version_number)
+- Hotfix/(Issue_number) (제발 쓸 일 없길 바라 ~~~) 
 
 
 
