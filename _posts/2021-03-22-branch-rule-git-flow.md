@@ -50,7 +50,10 @@ excerpt: ""
 
 보통은 이렇게 이슈 넘버나 버전 넘버를 다는데...    
 이번 프로젝트에서는 최대한 한 이슈에 대해서는 한 개의 커밋을 하는 것을 목표로 할 것이기 때문에  
-feature branch 같은 경우엔 어차피 `feature/<issue_number>`가 될 것이고 (제발)
+feature branch 같은 경우엔 어차피 `feature/<issue_number>`가 될 것이..고 (제발)
+
+근데 문득 1인개발인데 feature에서 또 issue number로 브랜치를 팔 필요가 있나? 싶어서  
+그냥 feature-(issue_number)로 팔 것.. ◠‿◠ 그냥 원래 이게 맞는 것 같기도 하고 
 
 release branch 같은 경우에도 release 브랜치를 항시 유지하는 것이 아니라  
 release-1.0.0 같은 식으로 네이밍 컨벤션을 정하는 것을 원문에서도 권장하고 있는 것 같아서  
@@ -62,9 +65,9 @@ release-1.0.0 같은 식으로 네이밍 컨벤션을 정하는 것을 원문에
 
 - main (아맞다 이젠 메인이지)
 - develop
-- feature/(issue_number)
+- feature-(issue_number)
 - release-(version_number)
-- Hotfix/(Issue_number) (제발 쓸 일 없길 바라 ~~~) 
+- Hotfix-(Issue_number) (제발 쓸 일 없길 바라 ~~~) 
 
 
 
