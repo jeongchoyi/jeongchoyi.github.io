@@ -51,3 +51,10 @@ resolved
 
 
 프로젝트 레포 컨벤션 고쳐야겠다...~
+
+### 추가
+
+이슈가 머지될 브랜치가 default branch여야 자동으로 이슈가 닫힌다..!!
+
+> You can link a pull request to an issue by using a supported keyword in the pull request's description or in a commit message (**please note that the pull request must be on the default branch**).
+
