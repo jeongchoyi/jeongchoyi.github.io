@@ -130,3 +130,38 @@ hidden도 똑같다.
     }
 ```
 
+
+
+## 추가 - back button 지정하는 함수 리팩토링
+
+다 좋은데... 백 버튼 왼쪽 여백이 너무 좁아서 ... 구현 방법을 바꿨다.
+
+![image](https://user-images.githubusercontent.com/28949235/112757793-35297b00-9026-11eb-9f9e-9f2dd94b8ec4.png)
+
+원래는   
+
+```swift
+navigationBar.backIndicatorImage = UIImage(systemName: "chevron.backward")
+navigationBar.backIndicatorTransitionMaskImage = UIImage(systemName: "chevron.backward")
+navigationItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+navigationItem?.backBarButtonItem?.tintColor = .black
+```
+
+이거였고, back button이 나타나기 전 뷰에서 함수를 호출해줘야 했다.
+
+리팩토링한 함수 body 부분은
+
+```swift
+let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(touchBackButton))
+backButton.tintColor = UIColor.Black
+
+navigationItem?.leftBarButtonItem = backButton
+```
+
+backBarButtonItem을 쓰지 않고 leftBarButtonItem을 사용하는 식으로 바꿨다.
+
+![image](https://user-images.githubusercontent.com/28949235/112757869-7883e980-9026-11eb-9440-924283f62606.png)
+
+확실히 여백이 더 편안하게 생긴다...... ( ◠‿◠ ) 직관적인 프로퍼티 안 쓰는게 좀 찝찝하긴 하지만...  
+또, **이 함수는 back button이 나타나는 뷰에서 사용한다!!**
+
