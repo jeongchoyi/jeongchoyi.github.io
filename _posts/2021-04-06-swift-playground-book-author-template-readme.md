@@ -1,10 +1,9 @@
 ---
- layout: post
+layout: post
 title: "Swift Playground book author templte readme 파일 번역" 
 date: 2021-04-06
 category: read 
 excerpt: ""
-
 ---
 
 # Playground book author templte readme
