@@ -11,7 +11,7 @@ excerpt: ""
 
 #### 1. 폰트를 다운받는다
 
-<img src="/Users/choyi/Library/Application Support/typora-user-images/image-20210418120851001.png" alt="image-20210418120851001" style="zoom:50%;" />
+<img src="/Users/choyi/Library/Application Support/typora-user-images/image-20210418171117901.png" alt="image-20210418171117901" style="zoom:50%;" />
 
 ttf, otf 상관 없다!
 
