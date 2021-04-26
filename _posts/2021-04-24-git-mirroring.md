@@ -1,14 +1,15 @@
 ---
 layout: post
-title: "github repo를 organization으로 커밋로그 포함해서 옮기기" 
+title: "github repo를 커밋로그 포함해서 옮기기" 
 date: 2021-04-24
 category: read 
 excerpt: ""
 
 ---
 
-# github repo를 organization으로 커밋로그 포함해서 옮기기
+# github repo를 커밋로그 포함해서 옮기기
 
+기존 개인 repo를 organization으로 옮길 일이 생겼다.  
 [여기](https://oizys18.github.io/2020-08-03/Git-mirroring) 게시글을 그대로 따라하다가
 
 ```
