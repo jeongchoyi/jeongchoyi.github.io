@@ -148,3 +148,13 @@ UI 작업이 반영되는 타이밍까지 기다렸다가 해당 코드를 실�
 
 암튼... dispatchQueue 진짜 똑똑하네잉..
 
+#  추가
+
+때는 210429... 갓수진님의 도움으로 깨달음을 얻었더랬다...
+
+> viewWillAppear에서 Autolayout constraints은 제대로 세팅되지 않은 상태라고 한다. viewWillAppear 🔜 viewWillLayoutSubviews 🔜 viewDidLayoutSubviews이 constraint를 만족시키기 위해 위해 차례대로 호출되는데, 따라서 그 다음으로 불리는 viewDidAppear에서야 constraint가 잘 세팅되어 있을 것이라고.. ㅎ
+
+> DispatchQueue async 가 불리는 시점이 공교롭게도 viewDidLayoutSubviews 이후라 레이아웃이 잘 적용된 것 처럼 보인듯
+
+한 것이었ㄷr..............
+
