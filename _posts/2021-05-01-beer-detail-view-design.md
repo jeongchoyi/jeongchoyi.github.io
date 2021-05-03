@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "UITableVIewCell의 버튼 트리거 다루기" 
-date: 2021-04-26
+date: 2021-05-01
 category: read 
 excerpt: ""
 
