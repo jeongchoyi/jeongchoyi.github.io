@@ -152,3 +152,8 @@ extension LoginViewController: ASAuthorizationControllerPresentationContextProvi
 아 그리고! 시뮬레이터로는 오류 뱉고 무한 로딩이 뜰 수 있는데,  
 기기 연결해서 빌드하면 그런 현상이 사라진다!
 
+### 추가
+
+리젝 당했음 ㅋㅋ
+
+꼭.. 애플 아이콘을 쓰세요..
