@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "초기 프로젝트 세팅하기" 
-date: 2021-03-01
+date: 2021-05-07
 category: read 
 excerpt: ""
 
