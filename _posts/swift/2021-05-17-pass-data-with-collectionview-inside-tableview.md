@@ -46,15 +46,15 @@ collectionView cell들은 나와있으니, tableView cell을 짜 봅시다 !
 
 **첫번째 tableview cell** - `EditorPickTableViewCell`
 
-<img src="https://user-images.githubusercontent.com/28949235/118485531-849d4500-b753-11eb-99a0-eb3e8a2ffe6d.png" alt="image" style="width:400px" /><img src="https://user-images.githubusercontent.com/28949235/118486245-5b30e900-b754-11eb-9ff8-ce54c70effe3.png" alt="image" style="width:400px" />
+<img src="https://user-images.githubusercontent.com/28949235/118485531-849d4500-b753-11eb-99a0-eb3e8a2ffe6d.png" alt="image" style="width:300px" /><img src="https://user-images.githubusercontent.com/28949235/118486245-5b30e900-b754-11eb-9ff8-ce54c70effe3.png" alt="image" style="width:300px" />
 
 **두번째 tableview cell** - `ProjectsTableViewCell`
 
-<img src="https://user-images.githubusercontent.com/28949235/118487003-3db04f00-b755-11eb-9cce-9d79eacb0fab.png" alt="image" style="width:400px" /><img src="https://user-images.githubusercontent.com/28949235/118486955-2d986f80-b755-11eb-9c20-8de1af29fd7a.png" alt="image" style="width:400px" />
+<img src="https://user-images.githubusercontent.com/28949235/118487003-3db04f00-b755-11eb-9cce-9d79eacb0fab.png" alt="image" style="width:300px" /><img src="https://user-images.githubusercontent.com/28949235/118486955-2d986f80-b755-11eb-9c20-8de1af29fd7a.png" alt="image" style="width:300px" />
 
 **세번째 tableview cell** - `ExhibitionTableViewCell`
 
-<img src="https://user-images.githubusercontent.com/28949235/118487165-67697600-b755-11eb-8b86-e7eb83f61977.png" alt="image" style="width:400px" /><img src="https://user-images.githubusercontent.com/28949235/118487734-fa0a1500-b755-11eb-887e-d455d383cd5f.png" alt="image" style="width:400px" />
+<img src="https://user-images.githubusercontent.com/28949235/118487165-67697600-b755-11eb-8b86-e7eb83f61977.png" alt="image" style="width:300px" /><img src="https://user-images.githubusercontent.com/28949235/118487734-fa0a1500-b755-11eb-887e-d455d383cd5f.png" alt="image" style="width:300px" />
 
 이 밑에부턴 다 `ProjectsTableViewCell` 재사용!  
 만들면서 각 셀 swift 파일에 @IBOutlet 연결도 다 해줬다.
@@ -101,4 +101,101 @@ row 수 지정, cell은 indexPath.row로 switch 분기처리해서 지정 !
 if let 구문으로 cell을 만들고 나서 각 cell 내의 set cell 함수를 사용해서 데이터를 전달해 줄 예정이다. (아직 안 짬)
 
 ## 5. 각 table view cell 세팅하기
+
+**첫번째 tableview cell** - `EditorPickTableViewCell`
+
+`assignDelegate()` , `assignDataSource()`  , `registerXib()` 다 해주고
+
+**Extension: UICollectionViewDelegateFlowLayout**
+
+* sizeForItemAt
+* minimumLineSpacingForSectionAt
+* minimumInteritemSpacingForSectionAt
+* insetForSectionAt
+
+**Extension: UICollectionViewDataSource**
+
+* numberOfItemsInSection
+* cellForItemAt
+
+까지 끝 !!
+
+## 6. Sample Data 만들기
+
+**데이터 구조 설계하기**
+
+![Untitled_Artwork 6](https://user-images.githubusercontent.com/28949235/118602149-49e7eb00-b7ed-11eb-9249-9d4bc4599f66.png)
+
+**샘플 데이터 입력 노가다**
+
+![image](https://user-images.githubusercontent.com/28949235/118602258-684de680-b7ed-11eb-9fb0-21900b9dd9d3.png)
+
+다..했어요.. ㅇ<-<
+
+이제 데이터를 뿌려뿌려..~~
+
+## 7. 데이터 뿌리기
+
+우선 전체 Tableview로 가서,  
+
+```swift
+    // MARK: - Properties
+    
+    var exampleArray = Tumblebug()
+```
+
+exampleArray를 만들어준다. 그리고  `// set cell 함수 호출` 같은 식으로 주석처리 해 둔 곳에 가서,  
+
+```swift
+let rowArray = exampleArray.objectArray[indexPath.row]
+```
+
+rowArray를 각 case문마다 만들어주고 넘겨줄건데,  
+각 tableview cell swift 파일에 가서 set cell 함수를 만들어준다.
+
+rowArray 안의 element들로 tableview cell 내의 collectionview cell을 갱신할 거니까, extension에 작성한다.
+
+```swift
+class EditorPickTableViewCell: UITableViewCell {
+    
+    // MARK: - Properties
+    
+    var editorPickProjects: [ProjectModel]?
+```
+
+변수 만들어주고
+
+```swift
+// MARK: - UICollectionViewDataSource
+
+extension EditorPickTableViewCell: UICollectionViewDataSource {
+    
+    func setCell(row: [ProjectModel]) {
+        self.editorPickProjects = row
+        self.editorPickCollectionView.reloadData()
+    }
+```
+
+setCell 함수도 만들어준다. 그리고 같은 extension 블럭 안에 있는 `cellForItemAt` 함수에 호출할  
+setCell 함수를 만들어 주기 위해,, collectionView cell swift 파일로 가서 setCell 함수를 만들어준다.
+
+**smallCollectionViewCell.swift**
+
+```swift
+    func setCell(project: ProjectModel) {
+        self.smallCellImageView.image = UIImage(named: project.image)
+        self.smallSubHeadLabel.text = "\(project.category) | \(project.company)"
+        self.smallHeadlineLabel.text = project.title
+        self.smallSubHead2Label.text = "\(project.percentage) 달성"
+    }
+```
+
+그리고 다시 tableviewcell swift 파일로 와서, set cell 함수를 호출해주면 된다.  
+또 바깥으로 한 칸 나와서 main VC swift 파일에서도 set cell 함수 호출 !!
+
+![image](https://user-images.githubusercontent.com/28949235/118607155-38094680-b7f3-11eb-8ef3-1a41bbf29af2.png)
+
+
+
+정리하자면 !!!!!!
 
