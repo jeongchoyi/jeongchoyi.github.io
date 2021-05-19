@@ -199,3 +199,5 @@ setCell 함수를 만들어 주기 위해,, collectionView cell swift 파일로 
 
 정리하자면 !!!!!!
 
+![Untitled_Artwork 4](https://user-images.githubusercontent.com/28949235/118745350-ee6f3900-b890-11eb-8f77-76ba7337b17f.png)
+
