@@ -76,8 +76,11 @@ MOMO를 개발할 때 해찌랑 [DispatchQueue 관련 실험](https://iamcho2.gi
      말 그대로 "제약조건을 업데이트" 한 것이라서, 실제 뷰를 배치하는데에는 영향을 **안** 줌.
    * 뷰의 frame을 그것의 제약조건에 따라 계산하는 과정
 
-   | <img src="https://user-images.githubusercontent.com/28949235/121385870-76260000-c984-11eb-94e0-f9bd2499f3a7.png" alt="image" width=200px /> | <span style="font-weight:normal">제약조건의 갱신은<br>뷰 계층구조 (view hierarchy)를 따라 하위 뷰에서 상위 뷰 방향으로 횡단하며 이루어짐.<br>(leaf most views -> window 방향, **Bottom-Up**)<br><br>`updateConstraints()`를 필요로 하는 모든 뷰가 `updateConstraints()`를 받음. <br><br><br>(요 동작은 자동으로 일어나지만, <br />상황에 따라 유저가 trigger를 해 줘야 할 때가 있는데,  <br />요 내용은 뒤에서 살펴보는걸로 !!) </span> |
+   | Image                                                        | Description                                                  |
    | ------------------------------------------------------------ | ------------------------------------------------------------ |
+   | <img src="https://user-images.githubusercontent.com/28949235/121385870-76260000-c984-11eb-94e0-f9bd2499f3a7.png" alt="image" width=200px /> | <span style="font-weight:normal">제약조건의 갱신은<br/>뷰 계층구조 (view hierarchy)를 따라 하위 뷰에서 상위 뷰 방향으로 횡단하며 이루어짐.<br/>(leaf most views -> window 방향, **Bottom-Up**)<br/><br/>`updateConstraints()`를 필요로 하는 모든 뷰가 `updateConstraints()`를 받음. <br/><br/><br/>(요 동작은 자동으로 일어나지만, <br />상황에 따라 유저가 trigger를 해 줘야 할 때가 있는데,  <br />요 내용은 뒤에서 살펴보는걸로 !!) </span> |
+
+   
 
 2. **레이아웃 업데이트 (Layout)**
 
@@ -110,3 +113,4 @@ MOMO를 개발할 때 해찌랑 [DispatchQueue 관련 실험](https://iamcho2.gi
  🤷‍♀️ 3단계가 있는거 알겠고, 그 안에 무슨 함수들이 있는지 알겠어.  
 근데 **언제 어디서 쓰는건데 !? 내가 오버라이딩 해서 써도 되는거냐고!!!**  
 에 대한 답을 찾으러 떠나봅시다...... 💪 ( ◠‿◠ )
+
