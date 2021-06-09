@@ -7,6 +7,8 @@ excerpt: ""
 
 ---
 
+# Render Loop을 VC, View Life Cycle과 살펴보기
+
 ## 서론
 
 > `viewDidLayoutSubviews()` 를 오버라이딩 해서 구현해야 할 일이 생겼는데,  
