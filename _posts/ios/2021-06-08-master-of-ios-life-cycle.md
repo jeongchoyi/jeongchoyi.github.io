@@ -52,13 +52,15 @@ excerpt: ""
   * `layoutIfNeeded()` 은 다음 드로잉 사이클까지 기다리지 않고 즉시 !! 업데이트 함.
   
 * 🙍‍♀️ UIView Life Cycle 있는 건 알겠는데... layout pass는 뭐지?
-  * 👩‍🎓
+  * 👩‍🎓 업데이트되어 설정된 제약조건에따라 뷰 트리를 레이아웃
   
 * 🙍‍♀️ 그거 말고 다른 pass도 있나? 있으면 뭐가 있지?
-  * 👩‍🎓
+  * 👩‍🎓 오토 레이아웃 진행 과정 중, 3개의 pass를 거치는데   
+    보통은 measurement pass - layout pass - display pass 순서.
+  * [The Deferred Layout Pass - Apple Docs](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/ModifyingConstraints.html)
   
 * 🙍‍♀️ Layout Cycle은 뭐고 AutoLayout Cycle이 뭐지? 그냥 같은건가?
-  * 👩‍🎓
+  * 👩‍🎓 그런듯?
   
 * 🙍‍♀️ 그냥 애초에 오토레이아웃이 어떻게 동작하는거길래?
 
