@@ -87,16 +87,20 @@ MOMO를 개발할 때 해찌랑 [DispatchQueue 관련 실험](https://iamcho2.gi
    * 제약조건을 바탕으로 레이아웃(뷰의 프레임 수치 값)을 업데이트 하는 단계.  
      Update Constraints 단계에서 계산된 것들을 바탕으로 뷰의 프레임이 업데이트 됨.
 
-   | <img src="https://user-images.githubusercontent.com/28949235/121388189-3cee8f80-c986-11eb-935e-aa11f966b275.png" alt="image" width=200px /> | <span style="font-weight:normal">이 프로세스는 전 단계와는 반대 방향으로<br />모든 뷰가 `layoutSubviews()`를 받는다. <br />(window -> leaves 방향, **Top-Down**) <br /><br /><br />( 요 단계가 `layoutSubviews()`를 오버라이딩 한다거나, <br />`setNeedsLayout()`, `layoutIfNeeded()` 요놈들이 등장하는 타이밍인데,<br />이것들도 뒤에서 자세히 살펴보는걸로 ,,~~)</span> |
-   | :----------------------------------------------------------- | ------------------------------------------------------------ |
+   | Image                                                        | Description                                                  |
+   | ------------------------------------------------------------ | ------------------------------------------------------------ |
+   | <img src="https://user-images.githubusercontent.com/28949235/121388189-3cee8f80-c986-11eb-935e-aa11f966b275.png" alt="image" width=200px /> | <span style="font-weight:normal">이 프로세스는 전 단계와는 반대 방향으로<br />모든 뷰가 `layoutSubviews()`를 받는다. <br />(window -> leaves 방향, **Top-Down**) <br /><br /><br />( 요 단계가 `layoutSubviews()`를 오버라이딩 한다거나, <br />`setNeedsLayout()`, `layoutIfNeeded()` 요놈들이 등장하는 타이밍인데,<br />이것들도 뒤에서 자세히 살펴보는걸로 ,,~~)</span> |
+
+   
 
 3. **디스플레이 (Display)** ~~(Render, Draw라고도 하는 듯)~~
 
    * 픽셀들을 스크린으로 가져오는 단계!
    * 뷰를 Layout 단계에서 구한 수치값을 사용해 스크린에 그리는 단계.
 
-   | <img src="https://user-images.githubusercontent.com/28949235/121389371-4b897680-c987-11eb-800b-e339d5b087fd.png" alt="image" width=200px /> | <span style="font-weight:normal">Layout 단계와 같은 방향으로 진행되면서,<br />모든 뷰들은 필요시 draw()를 받는다.<br /><br />요 `draw()`가 원래는 `drawRect()`였는데, rect가 매개변수로 빠지면서 `draw()`가 됐다.<br />(검색하면 `drawRect()`라고 많이 나옴)</span> |
+   | Image                                                        | Description                                                  |
    | ------------------------------------------------------------ | ------------------------------------------------------------ |
+   | <img src="https://user-images.githubusercontent.com/28949235/121389371-4b897680-c987-11eb-800b-e339d5b087fd.png" alt="image" width=200px /> | <span style="font-weight:normal">Layout 단계와 같은 방향으로 진행되면서,<br />모든 뷰들은 필요시 draw()를 받는다.<br /><br />요 `draw()`가 원래는 `drawRect()`였는데, rect가 매개변수로 빠지면서 `draw()`가 됐다.<br />(검색하면 `drawRect()`라고 많이 나옴)</span> |
 
    
 
