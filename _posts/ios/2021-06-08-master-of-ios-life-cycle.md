@@ -33,11 +33,7 @@ excerpt: ""
   
 * 🙍‍♀️ 그래? 오버라이딩 해서 써도 되면... 나처럼 써도 되나? 정해진 용도가 있나?
 
-  * 👩‍🎓 [Apple Development Docs](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621398-viewdidlayoutsubviews)
-
-* 🙍‍♀️ `viewDidLayoutSubViews()` 은 근데 왜 있는거지?
-
-  * 👩‍🎓 [Apple Development Docs](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621398-viewdidlayoutsubviews)
+  * 👩‍🎓`viewDidLayoutSubViews()`  [Apple Development Docs](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621398-viewdidlayoutsubviews) 에 보면 용도가 적혀있음!
 
 * 🙍‍♀️ `viewDidLayoutSubViews()` 처럼 기본(?) ViewController Life Cycle 외 함수가 또 뭐가 있지? 그것들의 순서는?
   * 👩‍🎓 기본 ViewController Life Cycle, 비(?)기본 ViewController Life Cycle이 있는 게 아니라,  
@@ -46,12 +42,18 @@ excerpt: ""
     [🔗 Render Loop을 ViewController, View Life Cycle과 살펴보기](https://iamcho2.github.io/2021/06/09/view-viewcontroller-layout-cycle-with-render-loop)
   
 * 🙍‍♀️ 오버라이딩은 다 되나?
-  * 👩‍🎓 [정리 포스팅]()
+  * 👩‍🎓 [🔗 VC, View Life Cycle 함수들 알아보기](https://iamcho2.github.io/2021/06/14/vc-and-view-life-cycle-functions)
   
+
+
+
+---
+
 * 🙍‍♀️ `setNeedsLayout()`, `layoutIfNeeded()` 는 뭐지?
   * 👩‍🎓 매 사이클에 포함되어 있는 건 아니고, View의 컨텐츠가 변경될 때 View를 다시 그려야 할 필요가 있음을 시스템에 알리는 역할.  
     이는 개발자가 따로 해줘야 하는 것 !! 다음 드로잉 사이클동안 View를 업데이트해야 함을 시스템에 알림. -> `setNeedsLayout()`
   * `layoutIfNeeded()` 은 다음 드로잉 사이클까지 기다리지 않고 즉시 !! 업데이트 함.
+  * [정리 포스팅]()
   
 * 🙍‍♀️ UIView Life Cycle 있는 건 알겠는데... layout pass는 뭐지?
   * 👩‍🎓 업데이트되어 설정된 제약조건에따라 뷰 트리를 레이아웃
@@ -82,8 +84,7 @@ excerpt: ""
 
 *  [ViewController 생명주기 정리](https://iamcho2.github.io/2021/06/02/viewcontroller-life-cycle)
 * [Render Loop을 VC, View Life Cycle과 살펴보기](https://iamcho2.github.io/2021/06/09/view-viewcontroller-layout-cycle-with-render-loop)
-
-
+* [VC, View Life Cycle 함수들 알아보기](https://iamcho2.github.io/2021/06/14/vc-and-view-life-cycle-functions)
 
 
 
