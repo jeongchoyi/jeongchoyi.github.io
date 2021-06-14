@@ -81,7 +81,7 @@ excerpt: ""
 ## 정리된 차례대로 보기
 
 *  [ViewController 생명주기 정리](https://iamcho2.github.io/2021/06/02/viewcontroller-life-cycle)
-* 
+* [Render Loop을 VC, View Life Cycle과 살펴보기](https://iamcho2.github.io/2021/06/09/view-viewcontroller-layout-cycle-with-render-loop)
 
 
 
