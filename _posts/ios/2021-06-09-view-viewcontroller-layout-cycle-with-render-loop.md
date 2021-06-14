@@ -37,7 +37,7 @@ MOMO를 개발할 때 해찌랑 [DispatchQueue 관련 실험](https://iamcho2.gi
 이 외에도 app life cycle도 있고... (당연히) life cycle이라고 다 같은 life cycle이 아니다...!  
 우선 ViewController Life Cycle이랑 View Life Cycle을 분리해서, 순서대로 어떻게 흘러가는지 살펴보자
 
-<img src="https://user-images.githubusercontent.com/28949235/121371532-951e9500-c978-11eb-8acd-0845e68c6218.png" alt="lifecycle" width=600px />
+![qwdqwd](https://user-images.githubusercontent.com/28949235/121914128-f5dd1180-cd6c-11eb-89f3-978e3d9195d7.png)
 
 > 이 이후에 `viewWillDisappear()`, `viewDidDisappear()`, `viewWillUnload()`, `viewDidUnload()`  도 있지만  
 > 내가 궁금한 부분은 `viewDidAppear()` 전 까지이기 때문에 앞으로도 `viewDidAppear()` 까지만 표시할 것...( ◠‿◠ ) 
@@ -46,7 +46,7 @@ MOMO를 개발할 때 해찌랑 [DispatchQueue 관련 실험](https://iamcho2.gi
 둘은 엄연히 다른 것들이다.
 
 그래그래 다른거 ㅇㅋㅇㅋ... 순서 ㅇㅋㅇㅋ...  
-근데, `updateConstraints()`, `intrinsicContentSize()`, ... 이게 다 뭔데?!!?  
+근데, `updateConstraints()`, `layoutSubviews()`, ... 이게 다 뭔데?!!?  
 **언제 어디서 쓰는건데 !? 내가 오버라이딩 해서 써도 되는거야!?!?**
 
 
@@ -66,7 +66,7 @@ MOMO를 개발할 때 해찌랑 [DispatchQueue 관련 실험](https://iamcho2.gi
 
 자세히는 좀 더 뒤에 알아보도록 하고, 다시 Life Cycle로 돌아와서
 
-<img src="https://user-images.githubusercontent.com/28949235/121371532-951e9500-c978-11eb-8acd-0845e68c6218.png" alt="lifecycle" width=600px />
+![qwdqwd](https://user-images.githubusercontent.com/28949235/121914128-f5dd1180-cd6c-11eb-89f3-978e3d9195d7.png)
 
 위에 첨부한 요 순서들은 (init 제외) 3가지 단계로 구분될 수 있는데, 먼저 Render Loop의 3단계를 살펴보자
 
@@ -108,7 +108,7 @@ MOMO를 개발할 때 해찌랑 [DispatchQueue 관련 실험](https://iamcho2.gi
 
 자 이렇게 Render Loop의 3단계에 대해서 알아봤으니, Life Cycle 함수들을 3단계로 구분해보자면
 
-![lifecycle-Recovered](https://user-images.githubusercontent.com/28949235/121391424-504f2a00-c989-11eb-8566-9142018c66a1.png)
+![qeefqe](https://user-images.githubusercontent.com/28949235/121914177-fecde300-cd6c-11eb-89fe-388c1aafaa31.png)
 
 요렇게 !!!
 
@@ -119,4 +119,10 @@ MOMO를 개발할 때 해찌랑 [DispatchQueue 관련 실험](https://iamcho2.gi
  🤷‍♀️ 3단계가 있는거 알겠고, 그 안에 무슨 함수들이 있는지 알겠어.  
 근데 **언제 어디서 쓰는건데 !? 내가 오버라이딩 해서 써도 되는거냐고!!!**  
 에 대한 답을 찾으러 떠나봅시다...... 💪 ( ◠‿◠ )
+
+
+
+### Update Log
+
+210615: `intrinsicContentSize()`이 [computed property로 바뀌어서](https://stackoverflow.com/questions/38881151/intrinsiccontentsize-method-does-not-override-any-method-from-its-superclass), 이미지에서 지움 
 
