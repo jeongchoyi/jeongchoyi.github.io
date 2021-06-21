@@ -19,6 +19,12 @@ excerpt: ""
  ios_base::sync_with_stdio(false); //main 함수 내에 작성
 ```
 
+### for
+
+```c++
+for(int i:vectorName) {...} // i가 vectorName 내 원소들을 순회
+```
+
 ### array
 
 ```c++
@@ -32,6 +38,10 @@ v.push_back(' '); // 맨 뒤에 원소 삽입
 v.erase(v.begin() + index); // 특정 인덱스의 원소 삭제
 ```
 
+```c++
+vector<int> students(n+2, 0) //n+2의 size만큼 0으로 초기화 (선언 시)
+```
+
 ### \<algorithm>
 
 ```c++
@@ -42,3 +52,34 @@ sort(처음, 끝); // 기본 오름차순 정리
 // 벡터 내림차순 정렬
 sort(v.begin(), v.end(), greater<int>());
 ```
+
+```c++
+// 배열 내 중복값 제거
+arr.erase(unique(arr.begin(), arr.end()),arr.end());
+```
+
+
+
+### \<string>
+
+```c++
+string str1 = to_string(12345);
+str1.at(index); // char 반환
+str1.size();
+```
+
+```c++
+str1.append("d");
+str2.append(str1, 0, 4); // str1의 0~4 idx만큼 str2 뒤에 append
+```
+
+```c++
+stoi(str1); // int로
+stof(str1); // float
+stol(str1); // long
+stod(str1); // double
+stoll(str1); // long long
+```
+
+
+
