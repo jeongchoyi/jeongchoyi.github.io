@@ -42,6 +42,12 @@ v.erase(v.begin() + index); // 특정 인덱스의 원소 삭제
 vector<int> students(n+2, 0) //n+2의 size만큼 0으로 초기화 (선언 시)
 ```
 
+```c++
+ answer.insert(answer.end(), temp.begin(), temp.end()); //answer벡터에 temp벡터 붙이기
+```
+
+
+
 ### \<algorithm>
 
 ```c++
@@ -56,6 +62,16 @@ sort(v.begin(), v.end(), greater<int>());
 ```c++
 // 배열 내 중복값 제거
 arr.erase(unique(arr.begin(), arr.end()),arr.end());
+```
+
+```c++
+// string벡터 사전순 정렬
+bool comp(string s1, string s2){
+  return s1 < s2; //사전순 정렬
+}
+// ...
+string arr[5] = {"asda", ..., "asdss"};
+sort(arr, arr+5, comp)
 ```
 
 
