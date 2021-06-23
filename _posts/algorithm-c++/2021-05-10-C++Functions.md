@@ -74,6 +74,12 @@ string arr[5] = {"asda", ..., "asdss"};
 sort(arr, arr+5, comp)
 ```
 
+```c++
+// 대칭 차집합 연산 (겹치는거 다 빼고 남은것만 반환하는게 대칭차집합)
+// 두 벡터 다 정렬되어있어야 하는 듯?
+auto iter = set_symmetric_difference(v1.begin(), v1.end(), v2.begin(), v2.end(), result.begin());
+```
+
 
 
 ### \<string>
@@ -82,10 +88,12 @@ sort(arr, arr+5, comp)
 string str1 = to_string(12345);
 str1.at(index); // char 반환
 str1.size();
+str1.length(); // 길 (size함수와 같음)
 ```
 
 ```c++
-str1.append("d");
+str1.append("d");  // char는 append 못함.
+str1 += "d" // 위랑 같음
 str2.append(str1, 0, 4); // str1의 0~4 idx만큼 str2 뒤에 append
 ```
 
@@ -95,6 +103,22 @@ stof(str1); // float
 stol(str1); // long
 stod(str1); // double
 stoll(str1); // long long
+```
+
+```c++
+str1.erase(str1.begin() + idx);
+str1.push_back(s); // char를 append할 때만 사용 가능
+```
+
+```c++
+s[i] = toupper(s[i]); //대문자로
+s[i] = tolower(s[i]); //소문자로
+isupper(s[i]); //대문자인지
+islower(s[i]); //소문자인지
+```
+
+```c++
+s.substr(시작점 인덱스,캐릭터 개수);
 ```
 
 
