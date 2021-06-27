@@ -108,3 +108,21 @@ private func presentReviewModalViewController() {
 이렇게 `reviewModalNavigationController`를 만들어주고,  
 `reviewModalNavigationController` 를 half modal로 present해 줬다.
 
+<img src="https://user-images.githubusercontent.com/28949235/123502627-d1483a00-d688-11eb-9650-d0037adcbabe.png" alt="simulator_screenshot_58603243-2462-4F0E-B560-E96F3EED9464" width=300px />
+
+이 다음에 해결해야 할 것은 push를 해서 넘어가도 half modal 상태인 것..!!  
+push후에는 새로 올라온 VC의 frame을 바꿔줘야 한다.
+
+위의 `HalfModalPresentationController` 클래스 내부에  
+
+```swift
+    override var frameOfPresentedViewInContainerView: CGRect {
+        CGRect(origin: CGPoint(x: 0,
+                               y: self.containerView!.frame.height * 181 / 800),
+               size: CGSize(width: self.containerView!.frame.width,
+                            height: self.containerView!.frame.height * 619 / 800))
+    }
+```
+
+이런 함수가 있는데, present된 뷰의 frame을 지정하는 부분이다
+
