@@ -87,7 +87,7 @@ jobs:
 예전에 블로그 검색 노출을 위해 feed.xml을 생성해놔서 추가적인 작업은 필요하지 않았지만,  
 혹시 몰라 feed.xml의 내용을 아래에 ,,
 
-```xml
+```
 ---
 ---
 <?xml version="1.0" encoding="UTF-8"?>
@@ -116,7 +116,6 @@ jobs:
         {% endfor %}
     </channel>
 </rss>
-
 ```
 
 그리고 블로그 피드 주소를 적는 곳에 `https://iamcho2.github.io/feed.xml` 을 적어주면 완성!
