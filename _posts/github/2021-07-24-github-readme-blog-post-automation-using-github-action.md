@@ -88,20 +88,18 @@ jobs:
 혹시 몰라 feed.xml의 내용을 아래에 ,,
 
 ```
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
-        <title>{{ site.name | xml_escape }}</title>
-        <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-        <link>{{ site.url }}</link>
-        <atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
-        <lastBuildDate>{% for post in site.posts limit:1 %}{{ post.date | date_to_rfc822 }}{% endfor %}</lastBuildDate>
-        {% for post in site.posts limit:10 %}
-            <item>
+        \<title>{{ site.name | xml_escape }}</title>
+        \<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
+        \<link>{{ site.url }}</link>
+        \<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
+        \<lastBuildDate>{% for post in site.posts limit:1 %}{{ post.date | date_to_rfc822 }}{% endfor %}\</lastBuildDate>
+        \{% for post in site.posts limit:10 %}
+            \<item>
                 <title>{{ post.title | xml_escape }}</title>
-                {% if post.author.name %}
+                \{% if post.author.name %}
                     <dc:creator>{{ post.author.name | xml_escape }}</dc:creator>
                 {% endif %}
                 {% if post.excerpt %}
