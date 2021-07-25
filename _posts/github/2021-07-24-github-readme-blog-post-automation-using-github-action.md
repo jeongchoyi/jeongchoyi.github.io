@@ -85,36 +85,9 @@ jobs:
 ![image](https://user-images.githubusercontent.com/28949235/126895640-ac7c73b7-458c-4272-8980-fcf56ed1f8da.png)
 
 예전에 블로그 검색 노출을 위해 feed.xml을 생성해놔서 추가적인 작업은 필요하지 않았지만,  
-혹시 몰라 feed.xml의 내용을 아래에 ,,
+혹시 몰라 feed.xml의 내용을 아래에 ,, 적으려 했는데 자꾸 실행이 돼서 캡쳐했다
 
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <channel>
-        \<title>{{ site.name | xml_escape }}</title>
-        \<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-        \<link>{{ site.url }}</link>
-        \<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
-        \<lastBuildDate>{% for post in site.posts limit:1 %}{{ post.date | date_to_rfc822 }}{% endfor %}\</lastBuildDate>
-        \{% for post in site.posts limit:10 %}
-            \<item>
-                <title>{{ post.title | xml_escape }}</title>
-                \{% if post.author.name %}
-                    <dc:creator>{{ post.author.name | xml_escape }}</dc:creator>
-                {% endif %}
-                {% if post.excerpt %}
-                    <description>{{ post.excerpt | xml_escape }}</description>
-                {% else %}
-                    <description>{{ post.content | xml_escape }}</description>
-                {% endif %}
-                <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-                <link>{{ site.url }}{{ post.url }}</link>
-                <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-            </item>
-        {% endfor %}
-    </channel>
-</rss>
-```
+![image](https://user-images.githubusercontent.com/28949235/126896919-e039bde1-372e-42e4-a699-7b1c54923c51.png)
 
 그리고 블로그 피드 주소를 적는 곳에 `https://iamcho2.github.io/feed.xml` 을 적어주면 완성!
 
