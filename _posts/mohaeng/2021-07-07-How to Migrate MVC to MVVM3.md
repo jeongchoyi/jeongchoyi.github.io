@@ -17,7 +17,7 @@ A. [iOS: How to pass a model from view model to view model using MVVM?](https://
 
 ### Q. @IBAction은 어떤 식으로 작성되는가?
 
-A. 
+A. 2
 
 ### Q. 
 
