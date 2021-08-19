@@ -38,6 +38,8 @@ unicodeScalars를 사용하면 asciiValue보다 속도가 조금 빠르다고 �
 
 문자열을 ASCII코드의 배열로 받기 위해서는 Character타입에 접근해서 사용하면 된다. (map 부분 참고)
 
+**unicodeScalar(char).value값은 UInt32형이기 때문에, Int로 사용해야 할 땐 캐스팅 해 줘야 한다.**
+
 ```swift
 let input = readLine()!.split(separator: " ").map { String($0) }
 let asciiNum = Character(input[0]).asciiValue!
@@ -66,4 +68,3 @@ Or another way as a string:
 let s = "\u{41}"
 ```
 
-걍 문자열 보간법 사용해도 된다. ;;
