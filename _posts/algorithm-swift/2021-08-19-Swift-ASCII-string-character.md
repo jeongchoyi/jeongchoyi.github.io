@@ -31,14 +31,15 @@ print(cafe.unicodeScalars.map { $0.value })
 // Prints "[67, 97, 102, 101, 769, 32, 100, 117, 32, 127757]"
 ```
 
-문자열의 unicodeScalars 프로퍼티는 유니코드 스칼라 값의 collection이다.
-( 이 때, é에서 e(101)와 악센트(769)가 분리되어 count가 10이 된다.)
+* 문자열의 unicodeScalars 프로퍼티는 유니코드 스칼라 값의 collection이다.
+  ( 이 때, é에서 e(101)와 악센트(769)가 분리되어 count가 10이 된다.)
 
-unicodeScalars를 사용하면 asciiValue보다 속도가 조금 빠르다고 한다. (문제풀이에 영향 갈 정도는 아님)
+* unicodeScalars를 사용하면 asciiValue보다 속도가 조금 빠르다고 한다. (문제풀이에 영향 갈 정도는 아님)
 
-문자열을 ASCII코드의 배열로 받기 위해서는 Character타입에 접근해서 사용하면 된다. (map 부분 참고)
+* 문자열을 ASCII코드의 배열로 받기 위해서는 Character타입에 접근해서 사용하면 된다. (map 부분 참고)
+* `Array(cafe.unicodeScalars)` 로 만든 배열의 자료형은  **[String.UnicodeScalarView.Element]** 이다.
 
-**unicodeScalar(char).value값은 UInt32형이기 때문에, Int로 사용해야 할 땐 캐스팅 해 줘야 한다.**
+* **unicodeScalar(char).value값은 UInt32형이기 때문에, Int로 사용해야 할 땐 캐스팅 해 줘야 한다.**
 
 ```swift
 let input = readLine()!.split(separator: " ").map { String($0) }
