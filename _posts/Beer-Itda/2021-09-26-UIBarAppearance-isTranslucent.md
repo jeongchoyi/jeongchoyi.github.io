@@ -15,7 +15,7 @@ excerpt: ""
 ![image](https://user-images.githubusercontent.com/28949235/134792428-8dbb53c7-696d-4ea3-9569-09c3813fe976.png)
 
 먼저, 원래 문제가 됐던 (아니 이제 문제가 된) 코드 부터 보자면,,,
-barTintColor, shadowImage 같은 건 상관 없고, `가 문제였다.
+barTintColor, shadowImage 같은 건 상관 없고, `isTranslucent = false`가 문제였다.
 
 필요 없는 코드를 지워보자
 
