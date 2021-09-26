@@ -140,7 +140,7 @@ navigationBar.barTintColor = .red
 
 (iOS15)
 
-안먹는다. **iOS14에서는, barTintColor는 isTranslucent가 false여야 먹는다.**
+안먹는다. **barTintColor는 isTranslucent가 false여야 먹는다.**
 
 ![image](https://user-images.githubusercontent.com/28949235/134794002-c5e2fbb1-3f76-4a3c-a735-f5858dba7e70.png)
 
