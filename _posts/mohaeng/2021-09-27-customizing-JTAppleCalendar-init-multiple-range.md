@@ -134,7 +134,8 @@ calendarCollectionView.minimumLineSpacing = 0
 calendarCollectionView.minimumInteritemSpacing = 0
 ```
 
-이렇게 spacing을 없애주면 된다.
+이렇게 spacing을 없애주면 된다.  
+(나중에 디자인 때문에 line spacing을 좀 줬다)
 
 <img src="https://user-images.githubusercontent.com/28949235/134801171-b3cd7101-9951-4d60-98db-82b00b856d69.png" alt="image" width=400 />
 
@@ -363,3 +364,6 @@ extension MyPageViewController: JTACMonthViewDelegate {
 }
 ```
 
+<img src="https://user-images.githubusercontent.com/28949235/134851257-df0d8bfc-e1e6-4b8b-b9a3-78126d20cf0e.png" alt="image" width=400 />
+
+터치 막고, 화살표도 동작하게 해야 하지만... 우선 완성 ( ◠‿◠ )  
